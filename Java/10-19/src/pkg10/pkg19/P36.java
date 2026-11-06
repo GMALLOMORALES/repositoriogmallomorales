@@ -4,32 +4,39 @@
  */
 package pkg10.pkg19;
 
+import java.util.Random;
 import java.util.Scanner;
 
 /**
  *
- * @author Guillermo
+ * @author Usuario
  */
 public class P36 {public static void main(String[] args) {
         
-        Scanner sc = new Scanner(System.in);
-        Random rnd = new Random();
-        char terminar;
-        int resultado = 0;
-        int dado1 = 0;
-        int dado2 = 0;
-        int dado3 = 0;
-          
-        while(terminar!='f' || terminar!='F'){
+            System.out.println("Lanza un dado");
+            System.out.println("Introduce 'f' para acabar");
+            Random rnd = new Random();
+            String parar ="";
+            int dado1, dado2, dado3;
+            int lanzamientos = 0;
+            Scanner sc = new Scanner(System.in);
+            int totaldados = 0;
             
-            System.out.println("");
+            while(!parar.equalsIgnoreCase("f") && !parar.equalsIgnoreCase("F")){
+                parar = sc.nextLine();
+                dado1 = rnd.nextInt(6)+1;
+                dado2 = rnd.nextInt(6)+1;
+                dado3 = rnd.nextInt(6)+1;
+                System.out.println("Dado 1:" + dado1);
+                System.out.println("Dado 2:" + dado2);
+                System.out.println("Dado 3:" + dado3);
+               totaldados = totaldados + dado1 + dado2 + dado3;
+               lanzamientos++;
+                parar = sc.nextLine();
+            }
             
-            dado1 = dado1 + Random();
-            dado2 = dado2 +
-            dado3 = dado3 +
-            
-            
-        }
+            System.out.println("Veces en las que los dados han sido lanzados: "+ lanzamientos);
+            System.out.println("Suma de los numeros de los dados: "+ totaldados);
     }
     
 }

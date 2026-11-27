@@ -36,6 +36,7 @@ public class Maximocomundivisorfuncion {
         
         
         System.out.println("MCD: " + mcd(a,b));
+         System.out.println("MCM: " + a*b/mcd(a,b));
     }
 
     
